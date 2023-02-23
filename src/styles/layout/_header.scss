@@ -1,0 +1,47 @@
+.header {
+    @include flex($justify:flex-start, $direction:column, $align:flex-end);
+    width: 100%;
+    background: url("./assets/images/background-image.webp") no-repeat
+    center/cover;
+    height: 100vh;
+    position: relative;
+
+    &-nav{
+        @include flex;
+        margin-top:20px;
+        margin-right:20px;
+        gap:30px;
+    }
+
+    &-list {
+        @include flex;
+        gap:30px;
+        
+
+        &-link {
+            font-family: $font-text;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 30px;
+            color: $color-text;
+            padding: 6px;
+            border-bottom: 2px solid $color-empty;
+        }
+    }
+
+    &-title{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(180deg, rgba(22, 26, 30, 0.77) 0%, rgba(22, 26, 30, 0.459473) 84.9%, rgba(22, 26, 30, 0) 100%);
+        width: 727px;
+        height: 306px;
+        @include flex($direction:column);
+}
+}
+
+.hover{
+    color:$color-title;
+}
