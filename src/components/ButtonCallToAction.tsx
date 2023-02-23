@@ -7,8 +7,10 @@ interface ButtonCallToActionInt {
 
 const ButtonCallToAction = ({ text, url }: ButtonCallToActionInt) => {
   return (
-    <button>
-      <Link to={url}>{text}</Link>
+    <button className='button'>
+      <Link to={url} className='button-link'>
+        {text}
+      </Link>
     </button>
   );
 };

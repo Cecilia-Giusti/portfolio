@@ -21,6 +21,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "sass": "sass --watch ./src/styles/index.scss:./public/style_compressed.css --style compressed",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
