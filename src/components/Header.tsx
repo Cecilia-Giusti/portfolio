@@ -27,7 +27,7 @@ const Header = () => {
         <ButtonCallToAction text='Contactez-moi' url='/' />
       </nav>
       <div className='header-title'>
-        <Title text='Cécilia Giusti' numberTitle={2} />
+        <Title text='Cécilia Giusti' numberTitle={3} />
         <Subtitle text='Développeuse Front-End' numberSubtitle={4} />
       </div>
     </header>

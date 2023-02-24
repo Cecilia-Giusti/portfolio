@@ -4,3 +4,13 @@
     justify-content: $justify;
     align-items: $align;
 }
+
+@mixin paragraph($weight: 400, $size:20px){
+    font-family:$font-text;
+    font-style: normal;
+    font-weight: $weight;
+    font-size: $size;
+    text-align: justify;
+    letter-spacing: 0.3px;
+    color:$color-text; 
+}

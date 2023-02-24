@@ -1,27 +1,78 @@
-.section-aboutMe{
+.section-aboutMe {
     width: 100%;
     background: linear-gradient(113.49deg, #227C9D -30.3%, #0E3B4A 58.12%);
     @include flex;
     height: 100vh;
 
-    &-content{
+    &-content {
         @include flex;
-        width:80%;
+        width: 80%;
         gap: 70px;
     }
 
-    &-text{
-    width:40%;
-   
+    &-text {
+        width: 40%;
+
     }
 
-    &-paragraph{
-        font-family:$font-text;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        text-align: justify;
-        letter-spacing: 0.3px;
-        color:$color-text; 
+    &-paragraph {
+        @include paragraph;
+    }
+}
+
+.section-skills {
+    width: 100%;
+    background: #161A1E;
+    @include flex;
+    height: 100vh;
+
+    &-content {
+        @include flex($direction: column, $align: flex-start);
+        width: 80%;
+        gap: 30px;
+
+        h2 {
+            color: $color-hightlight;
+        }
+    }
+
+    &-article {
+        @include flex($justify: flex-start, $align:stretch);
+        gap: 50px;
+    }
+
+    &-text {
+        @include paragraph;
+        width: 60%;
+    }
+
+    &-card {
+        background: linear-gradient(359.88deg, rgba(255, 255, 255, 0.2263) -0.57%, rgba(255, 255, 255, 0.106046) 82.92%, rgba(255, 255, 255, 0.0744) 100.24%);
+        box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 25px;
+        padding:10px;
+        @include flex;
+    }
+
+    &-list{
+        @include flex($direction:column,$align:flex-start, $justify:flex-start);
+    gap:20px;
+    }
+
+   &-item div{
+        @include flex($justify:flex-start);
+        gap:10px;
+       }
+   
+
+    &-circle{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #17C3B2;
+    }
+
+    &-skill{
+        @include paragraph;
     }
 }

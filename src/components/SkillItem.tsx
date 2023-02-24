@@ -5,7 +5,7 @@ interface SkillItemInt {
 const SkillItem = ({ skill }: SkillItemInt) => {
   return (
     <div>
-      <span className='section-skills-circle'></span>
+      <div className='section-skills-circle'></div>
       <p className='section-skills-skill'>{skill}</p>
     </div>
   );
