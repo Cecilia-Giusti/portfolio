@@ -11,6 +11,7 @@
         margin-top:20px;
         margin-right:20px;
         gap:30px;
+        
     }
 
     &-list {
@@ -21,7 +22,7 @@
         &-link {
             font-family: $font-text;
             font-style: normal;
-            font-weight: 500;
+            font-weight: 400;
             font-size: 16px;
             line-height: 30px;
             color: $color-text;

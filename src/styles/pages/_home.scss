@@ -1,0 +1,27 @@
+.section-aboutMe{
+    width: 100%;
+    background: linear-gradient(113.49deg, #227C9D -30.3%, #0E3B4A 58.12%);
+    @include flex;
+    height: 100vh;
+
+    &-content{
+        @include flex;
+        width:80%;
+        gap: 70px;
+    }
+
+    &-text{
+    width:40%;
+    gap:20px;
+    }
+
+    &-paragraph{
+        font-family:$font-text;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        text-align: justify;
+        letter-spacing: 0.3px;
+        color:$color-text; 
+    }
+}
