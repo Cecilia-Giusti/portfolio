@@ -8,5 +8,17 @@
     "Amélioration de l’accessibilité",
     "Rigoureuse",
     "Travail en équipe"
+  ],
+  "socialNetwork": [
+    {
+      "name": "Linkedin",
+      "url": "https://www.linkedin.com/in/cecilia-giusti/",
+      "logo": "fa-brands fa-linkedin-in"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/Cecilia-Giusti",
+      "logo": "fa-brands fa-github"
+    }
   ]
 }

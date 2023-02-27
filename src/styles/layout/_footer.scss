@@ -1,0 +1,55 @@
+.footer {
+    height: 30vh;
+    background-color: $color-background-dark;
+    @include flex($direction: column, $justify: flex-start);
+    gap: 100px;
+    position: relative;
+
+    &-text {
+        font-family: $font-title;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 67px;
+        text-align: center;
+        color: $color-title;
+    }
+
+    &-callToAction {
+        width: 80%;
+        @include flex($justify: space-between);
+    }
+
+    &-list {
+        @include flex;
+        gap: 10px;
+    }
+
+    &-item-button {
+        background-color: $color-buttons-socialNetworks;
+        border-radius: 25px;
+        width: 35px;
+        height: 35px;
+
+        i {
+            color: $color-text;
+            font-size:20px;
+        }
+    }
+
+    &-button-top {
+        position: absolute;
+        top:3%;
+        right: 10%;
+        transform: translate(-3%, -10%);
+        width: 50px;
+        height: 50px;
+        background: $color-button-chevronUp;
+        border-radius: 30px;
+
+        i {
+            color: $color-title;
+            font-size: 20px;
+        }
+    }
+}
