@@ -11,7 +11,7 @@ const Realisations = () => {
         {projects.projects.map((projet, id) => {
           return (
             <Link
-              to={`/mes-projets/${projet.name}`}
+              to={`/mes-projets/${projet.id}`}
               key={id}
               className='section-realisations-link'>
               <ProjectCard
