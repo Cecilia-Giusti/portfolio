@@ -4,6 +4,7 @@
     @include flex($direction: column, $justify: flex-start);
     gap: 100px;
     position: relative;
+    padding-top:30px;
 
     &-text {
         font-family: $font-title;
@@ -39,9 +40,9 @@
 
     &-button-top {
         position: absolute;
-        top:3%;
+        top:15%;
         right: 10%;
-        transform: translate(-3%, -10%);
+        transform: translate(-15%, -10%);
         width: 50px;
         height: 50px;
         background: $color-button-chevronUp;

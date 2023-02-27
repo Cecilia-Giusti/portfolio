@@ -86,6 +86,7 @@
     background: linear-gradient(113.49deg, #227C9D -30.3%, #0E3B4A 58.12%);
     @include flex($direction:column, $justify:flex-start);
     padding-top:100px;
+    padding-bottom:100px;
     gap:50px;
     min-height: 100vh;
 
