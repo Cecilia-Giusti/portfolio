@@ -1,0 +1,55 @@
+.section-project {
+    width: 100%;
+    background: linear-gradient(113.49deg, #227C9D -30.3%, #0E3B4A 58.12%);
+    @include flex($direction: column);
+    gap: 50px;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 50px;
+
+    &-close {
+        position: absolute;
+        top: 10px;
+        left: 20px;
+
+        i {
+            color: $color-title;
+            font-size: 40px;
+        }
+    }
+
+    &-content {
+        @include flex($direction: column, $justify: flex-start);
+        gap: 30px;
+    }
+
+    &-titles {
+        text-align: center;
+    }
+
+    &-img {
+        width: 60%;
+        margin: auto;
+        border-radius: 20px;
+        overflow: hidden;
+
+        img {
+            -o-object-fit: cover;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+
+    &-text {
+        @include flex($direction: column);
+        gap: 20px;
+        @include paragraph($size: 14px);
+        line-height: 180%;
+        padding: 30px;
+    }
+
+    &-buttons {
+        @include flex;
+        gap: 20px;
+    }
+}

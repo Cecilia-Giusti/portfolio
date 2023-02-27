@@ -12,20 +12,30 @@ const Project = () => {
   if (realisation !== undefined) {
     return (
       <section className='section-project'>
-        <div>
+        <button className='section-project-close'>
+          <i className='fa-solid fa-xmark'></i>
+        </button>
+
+        <div className='section-project-titles'>
           <Title text={realisation.name} numberTitle={2} />
           <Subtitle text={realisation.stack.join(" | ")} numberSubtitle={4} />
-          <div>
+        </div>
+        <div className='section-project-content'>
+          <div className='section-project-img'>
             <img
-              src={realisation.img}
+              src={realisation.maquettes}
               alt={`Maquette du projet ${realisation.name}`}
             />
           </div>
-          <div>
-            <p>{realisation.description}</p>
-            <p>{realisation.specifications}</p>
+          <div className='section-project-text'>
+            <p className='section-project-description'>
+              {realisation.description}
+            </p>
+            <p className='section-project-specifications'>
+              {realisation.specifications}
+            </p>
           </div>
-          <div>
+          <div className='section-project-buttons'>
             <ButtonCallToAction text='Voir le projet' url={realisation.url} />
             <ButtonCallToAction
               text='Voir les livrables'

@@ -13,6 +13,7 @@
     {
       "id": 1,
       "name": "Kasa - Projet OC",
+      "maquettes": "./assets/images/projects/maquette-kasa.png",
       "livrables": "https://github.com/Cecilia-Giusti/P11---Kasa/tree/develop/kasa",
       "img": "./assets/images/projects/kasa.jpeg",
       "url": "https://cecilia-giusti.github.io/P11---Kasa/",
@@ -23,6 +24,7 @@
     {
       "id": 2,
       "name": "OhmyFood - Projet OC",
+      "maquettes": "./assets/images/projects/maquettes-ohmyfood.png",
       "livrables": "https://github.com/Cecilia-Giusti/CeciliaGiusti_3_01_02_2022",
       "img": "./assets/images/projects/ohmyfood.jpg",
       "url": "https://cecilia-giusti.github.io/CeciliaGiusti_3_01_02_2022/",
@@ -33,6 +35,7 @@
     {
       "id": 3,
       "livrables": "https://github.com/Cecilia-Giusti/P-14-wealth-health",
+      "maquettes": "./assets/images/projects/maquettes-wealth-health.png",
       "name": "Wealth Health - Projet OC",
       "img": "./assets/images/projects/kasa.jpeg",
       "url": "https://cecilia-giusti.github.io/P-14-wealth-health/",

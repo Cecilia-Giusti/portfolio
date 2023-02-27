@@ -8,7 +8,7 @@ interface ButtonCallToActionInt {
 const ButtonCallToAction = ({ text, url }: ButtonCallToActionInt) => {
   return (
     <button className='button'>
-      <Link to={url} className='button-link'>
+      <Link to={url} className='button-link' target={"_blank"}>
         {text}
       </Link>
     </button>
