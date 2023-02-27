@@ -84,6 +84,13 @@
 .section-realisations {
     width: 100%;
     background: linear-gradient(113.49deg, #227C9D -30.3%, #0E3B4A 58.12%);
-    @include flex;
-    height: 100vh;
+    @include flex($direction:column, $justify:flex-start);
+    padding-top:100px;
+    gap:50px;
+    min-height: 100vh;
+
+    &-content{
+        @include flex($direction:column);
+        gap:30px;
+    }
 }
