@@ -8,5 +8,15 @@
     "Amélioration de l’accessibilité",
     "Rigoureuse",
     "Travail en équipe"
+  ],
+  "projects": [
+    {
+      "name": "Kasa",
+      "img": "./assets/images/projects/kasa.jpeg",
+      "url": "https://cecilia-giusti.github.io/P11---Kasa/",
+      "description": "Kasa est une entreprise reconnue en France pour son rôle de leader dans la location d'appartements entre particuliers. Avec son expertise et son expérience, elle offre une solution pratique et économique pour les propriétaires et les locataires en quête de logements de qualité. Kasa se distingue par son approche personnalisée et sa connaissance approfondie du marché immobilier français, ce qui lui permet de répondre efficacement aux besoins de chacun. Que vous soyez un propriétaire souhaitant louer votre bien immobilier ou un locataire cherchant un logement confortable et abordable, Kasa est la référence incontournable pour la location d'appartements entre particuliers en France.",
+      "stack": ["React", "CSS"],
+      "specifications": "Le projet Kasa, développé en utilisant la technologie React, devait respecter des spécifications et des contraintes strictes afin de répondre aux besoins de ses utilisateurs. Les composants React ont été soigneusement sélectionnés et intégrés pour offrir une expérience utilisateur optimale. Le React router a été utilisé pour gérer la navigation de manière fluide et efficace. De plus, les maquettes ont été suivies de manière rigoureuse pour s'assurer que l'interface graphique était cohérente et facile à utiliser.La conception de l'application a également été pensée pour être responsive, c'est-à-dire qu'elle s'adapte à tous les types d'écrans et de périphériques, afin d'offrir une expérience utilisateur optimale, peu importe le contexte. Aucune librairie externe n'a été utilisée afin de garantir une stabilité et une sécurité maximales de l'application. Le découpage par composant modulaire a été adopté pour faciliter la maintenance et l'évolutivité du code. Chaque fonctionnalité a été divisée en composants indépendants, ce qui permet de les réutiliser facilement dans d'autres parties de l'application. Enfin, une page 404 a été intégrée pour offrir une expérience utilisateur optimale, même en cas d'erreur ou de page manquante. En somme, le projet Kasa a été développé en suivant scrupuleusement toutes les spécifications et contraintes imposées pour offrir une expérience utilisateur optimale, stable et sécurisée."
+    }
   ]
 }
