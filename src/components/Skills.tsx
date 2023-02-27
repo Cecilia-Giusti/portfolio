@@ -38,7 +38,7 @@ const Skills = () => {
         </article>
         <ButtonDownload
           text='Télécharger mon CV'
-          url='/assets/files/CV_Giusti_Cecilia.pdf'
+          url='./assets/files/CV_Giusti_Cecilia.pdf'
           file='CV_Giusti_Cecilia.pdf'
         />
       </div>
