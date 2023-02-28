@@ -1,6 +1,6 @@
-import ButtonCallToAction from "./ButtonCallToAction";
 import socialIcons from "../data/database.json";
 import SocialNetwork from "./SocialNetwork";
+import ButtonContact from "./ButtonContact";
 
 const Footer = () => {
   return (
@@ -17,7 +17,7 @@ const Footer = () => {
           })}
         </ul>
 
-        <ButtonCallToAction text='Contactez-moi' url='/' />
+        <ButtonContact />
       </div>
       <button className='footer-button-top'>
         <i className='fa-solid fa-chevron-up'></i>

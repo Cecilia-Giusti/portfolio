@@ -46,6 +46,10 @@
                 transform: scaleX(1);
                 transition-duration: 500ms;
             }
+
+            &:hover a{
+                color:$color-title;
+            }
         }
         
       
@@ -59,10 +63,7 @@
             color: $color-text;
             padding: 6px;
          
-
-            &:hover{
-                color:$color-title;
-            }
+            
         }
     }
 
@@ -78,3 +79,8 @@
 }
 }
 
+
+.active{
+    color:$color-title;
+ 
+}
