@@ -1,36 +1,45 @@
+import gsap from "gsap";
+import { useLayoutEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import ButtonContact from "./ButtonContact";
 import Subtitle from "./Subtitle";
 import Title from "./Title";
-import { motion } from "framer-motion";
 
 const Header = () => {
-  const list = {
-    visible: {
-      opacity: 1,
-      transition: {
-        when: "beforeChildren",
-        staggerChildren: 0.3,
-        duration: 1,
-        ease: "easeOut",
-      },
-    },
-    hidden: { opacity: 0 },
-  };
+  const headerRef = useRef<HTMLInputElement>(null);
+  const buttonContactMeRef = useRef<HTMLInputElement>(null);
+  const listRef = useRef([]);
+  const title = useRef(null);
 
-  const item = {
-    visible: { opacity: 1, y: 0 },
-    hidden: { opacity: 0, y: -10 },
-  };
+  useLayoutEffect(() => {
+    if (headerRef.current !== null) {
+      listRef.current = Array.from(
+        headerRef.current.querySelectorAll(".header-list-item")
+      );
+
+      const tl = gsap.timeline({ defaults: { ease: "power3" } });
+
+      tl.to(title.current, { autoAlpha: 1, duration: 1 })
+        .to(listRef.current, {
+          autoAlpha: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.1,
+        })
+        .to(buttonContactMeRef.current, {
+          autoAlpha: 1,
+          y: 0,
+          duration: 0.8,
+          ease: "bounce",
+        });
+    }
+  }, []);
+
   return (
-    <header className='header'>
+    <header className='header' ref={headerRef}>
       <nav className='header-nav'>
-        <motion.ul
-          className='header-list'
-          initial='hidden'
-          animate='visible'
-          variants={list}>
-          <motion.li className='header-list-item' variants={item}>
+        <ul className='header-list'>
+          <li className='header-list-item'>
             <NavLink
               to={"/"}
               className={({ isActive }) =>
@@ -38,8 +47,8 @@ const Header = () => {
               }>
               Accueil
             </NavLink>
-          </motion.li>
-          <motion.li className='header-list-item' variants={item}>
+          </li>
+          <li className='header-list-item'>
             <NavLink
               to={"/skills"}
               className={({ isActive }) =>
@@ -47,8 +56,8 @@ const Header = () => {
               }>
               Compétences
             </NavLink>
-          </motion.li>
-          <motion.li className='header-list-item' variants={item}>
+          </li>
+          <li className='header-list-item'>
             <NavLink
               to={"/realisations"}
               className={({ isActive }) =>
@@ -56,16 +65,13 @@ const Header = () => {
               }>
               Réalisation
             </NavLink>
-          </motion.li>
-        </motion.ul>
-        <motion.span
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2, ease: "easeOut" }}>
+          </li>
+        </ul>
+        <span className='button-contact-nav' ref={buttonContactMeRef}>
           <ButtonContact />
-        </motion.span>
+        </span>
       </nav>
-      <div className='header-title'>
+      <div className='header-title' ref={title}>
         <Title text='Cécilia Giusti' numberTitle={3} />
         <Subtitle text='Développeuse Front-End' numberSubtitle={4} />
       </div>

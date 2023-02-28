@@ -17,12 +17,15 @@
     &-list {
         @include flex;
         gap:30px;
-      
+    
 
         
 
         &-item{
             position: relative;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(-50px);
             
 
             &::after{
@@ -76,6 +79,9 @@
         width: 727px;
         height: 306px;
         @include flex($direction:column);
+
+        visibility: hidden;
+        opacity: 0;
 }
 }
 
