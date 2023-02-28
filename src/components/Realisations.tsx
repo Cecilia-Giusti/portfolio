@@ -4,6 +4,10 @@ import ProjectCard from "./ProjectCard";
 import { Link } from "react-router-dom";
 
 const Realisations = () => {
+  const handleLinkClick = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <section className='section-realisations'>
       <Title text='RÉALISATIONS' numberTitle={2} />
@@ -11,8 +15,9 @@ const Realisations = () => {
         {projects.projects.map((projet, id) => {
           return (
             <Link
-              to={`/mes-projets/${projet.name}`}
+              to={`/mes-projets/${projet.id}`}
               key={id}
+              onClick={handleLinkClick}
               className='section-realisations-link'>
               <ProjectCard
                 name={projet.name}
