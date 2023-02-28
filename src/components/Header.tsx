@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import ButtonCallToAction from "./ButtonCallToAction";
 import Subtitle from "./Subtitle";
 import Title from "./Title";
+import { motion } from "framer-motion";
 
 const Header = () => {
   return (
@@ -14,7 +15,7 @@ const Header = () => {
             </NavLink>
           </li>
           <li className='header-list-item'>
-            <NavLink to={"/"} className='header-list-link'>
+            <NavLink to={"/skills"} className='header-list-link'>
               Compétences
             </NavLink>
           </li>

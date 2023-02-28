@@ -17,7 +17,38 @@
     &-list {
         @include flex;
         gap:30px;
+      
+
         
+
+        &-item{
+            position: relative;
+            
+
+            &::after{
+                content:'';
+                position: absolute;
+                width:100%;
+                bottom:0;
+                left:0;
+                border-bottom: 2px solid $color-empty;
+                 transform: scaleX(0);
+                 transition-duration: 300ms;
+            }
+
+            &:hover::after{
+                content:'';
+                position: absolute;
+                width:100%;
+                bottom:0;
+                left:0;
+                border-bottom: 2px solid $color-title;
+                transform: scaleX(1);
+                transition-duration: 500ms;
+            }
+        }
+        
+      
 
         &-link {
             font-family: $font-text;
@@ -27,7 +58,11 @@
             line-height: 30px;
             color: $color-text;
             padding: 6px;
-            border-bottom: 2px solid $color-empty;
+         
+
+            &:hover{
+                color:$color-title;
+            }
         }
     }
 
@@ -43,6 +78,3 @@
 }
 }
 
-.hover{
-    color:$color-title;
-}

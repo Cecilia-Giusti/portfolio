@@ -5,7 +5,7 @@ import ButtonDownload from "./ButtonDownload";
 
 const Skills = () => {
   return (
-    <section className='section-skills'>
+    <section className='section-skills' id='skills'>
       <div className='section-skills-content'>
         <Title text='COMPÉTENCES' numberTitle={2} />
         <article className='section-skills-article'>
