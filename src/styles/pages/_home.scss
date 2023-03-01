@@ -109,7 +109,9 @@
     min-height: 100vh;
 
     &-content{
-        @include flex($direction:column);
+        @include flex;
         gap:30px;
+        flex-wrap: wrap;
     }
 }
+

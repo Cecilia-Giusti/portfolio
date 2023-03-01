@@ -13,14 +13,9 @@ const Home = () => {
   const appRef = useRef(null);
   const aboutMeRef = useRef(null);
   const skillsRef = useRef(null);
-  const realisationsRef = useRef(null);
-  const footerRef = useRef(null);
 
   useEffect(() => {
     const aboutMeProperties = { y: "-40vh" };
-
-    const realisationsProperties = { y: "-20vh" };
-    const footerProperties = { y: "-10vh" };
 
     if (aboutMeRef.current) {
       gsap.to(aboutMeRef.current, {
@@ -54,7 +49,7 @@ const Home = () => {
               duration: 0.5,
             });
           },
-          scrub: true,
+          scrub: 1,
         },
 
         ease: "power2",
@@ -84,36 +79,8 @@ const Home = () => {
               duration: 0.2,
             });
           },
-          scrub: true,
+          scrub: 1,
         },
-      });
-    }
-
-    if (realisationsRef.current) {
-      gsap.to(realisationsRef.current, {
-        scrollTrigger: {
-          trigger: realisationsRef.current,
-          start: "top bottom",
-          end: "bottom 20%",
-          scrub: true,
-        },
-        duration: 1,
-        ease: "power4.out",
-        ...realisationsProperties,
-      });
-    }
-
-    if (footerRef.current) {
-      gsap.to(footerRef.current, {
-        scrollTrigger: {
-          trigger: footerRef.current,
-          start: "top 80%",
-          end: "bottom 20%",
-          scrub: true,
-        },
-        duration: 1,
-        ease: "power4.out",
-        ...footerProperties,
       });
     }
   }, []);
@@ -123,8 +90,8 @@ const Home = () => {
       <Header />
       <AboutMe ref={aboutMeRef} />
       <Skills ref={skillsRef} />
-      <Realisations ref={realisationsRef} />
-      <Footer ref={footerRef} />
+      <Realisations />
+      <Footer />
     </div>
   );
 };
