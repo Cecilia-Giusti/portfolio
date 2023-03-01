@@ -22,6 +22,14 @@ const Home = () => {
     if (lastVisitedSection) {
       window.scrollTo({ top: Number(lastVisitedSection), behavior: "auto" });
     }
+
+    window.onbeforeunload = () => {
+      localStorage.removeItem("lastVisitedSection");
+    };
+    window.onunload = () => {
+      localStorage.removeItem("lastVisitedSection");
+      window.scrollTo(0, 0);
+    };
     setSkillsSection(document.getElementById("skills"));
     setRealisationsSection(document.getElementById("realisations"));
 
