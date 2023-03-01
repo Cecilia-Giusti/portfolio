@@ -13,8 +13,16 @@
         left: 20px;
 
         i {
-            color: $color-title;
+            color: $color-subtitle;
             font-size: 40px;
+        }
+
+        &:hover{
+
+            i{
+                transition-duration: 300ms;
+                color:$color-title;
+            }
         }
     }
 
