@@ -31,6 +31,19 @@
         border-radius: 25px;
         width: 35px;
         height: 35px;
+        transition-duration: 500ms;
+
+        &:hover{
+            background-color: $color-title;
+            transform: translateY(-10px);
+         
+            transition-duration: 500ms;
+
+            i{
+                transform: scale(1.08);
+                transition-duration: 500ms;
+            }
+        }
 
         i {
             color: $color-text;
