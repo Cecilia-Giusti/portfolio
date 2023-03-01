@@ -3,9 +3,15 @@ import Title from "./Title";
 import skills from "../data/database.json";
 import ButtonDownload from "./ButtonDownload";
 
-const Skills = () => {
+import { forwardRef } from "react";
+
+interface skillsInt {
+  ref?: React.RefObject<HTMLDivElement>;
+}
+
+const Skills = forwardRef<HTMLDivElement, skillsInt>((props, ref) => {
   return (
-    <section className='section-skills'>
+    <section className='section-skills' id='skills' ref={ref}>
       <div className='section-skills-content'>
         <Title text='COMPÉTENCES' numberTitle={2} />
         <article className='section-skills-article'>
@@ -44,6 +50,6 @@ const Skills = () => {
       </div>
     </section>
   );
-};
+});
 
 export default Skills;

@@ -1,8 +1,10 @@
 .section-aboutMe {
+    z-index:1;
     width: 100%;
     background: linear-gradient(113.49deg, #227C9D -30.3%, #0E3B4A 58.12%);
     @include flex;
     height: 100vh;
+    
 
     &-content {
         @include flex;
@@ -10,8 +12,17 @@
         gap: 70px;
     }
 
+    &-img{
+        transform: translateX(-200px);
+        visibility: hidden;
+        opacity: 0;
+    }
+
     &-text {
         width: 40%;
+        transform: translateX(200px);
+        visibility: hidden;
+        opacity: 0;
 
     }
 
@@ -21,18 +32,24 @@
 }
 
 .section-skills {
+    z-index:100;
     width: 100%;
     background: #161A1E;
     @include flex;
     height: 100vh;
+    position: relative;
 
     &-content {
-        @include flex($direction: column, $align: flex-start);
+        @include flex($direction: column, $align: center);
         width: 80%;
         gap: 30px;
+        opacity: 0;
+        visibility: hidden;
+       
 
         h2 {
             color: $color-hightlight;
+            align-self: flex-start;
         }
 
         button{
@@ -41,7 +58,7 @@
     }
 
     &-article {
-        @include flex($justify: flex-start, $align:stretch);
+        @include flex($justify: space-between, $align:stretch);
         gap: 50px;
     }
 
@@ -92,7 +109,9 @@
     min-height: 100vh;
 
     &-content{
-        @include flex($direction:column);
+        @include flex;
         gap:30px;
+        flex-wrap: wrap;
     }
 }
+

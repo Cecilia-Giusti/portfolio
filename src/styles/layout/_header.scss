@@ -17,7 +17,45 @@
     &-list {
         @include flex;
         gap:30px;
+    
+
         
+
+        &-item{
+            position: relative;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(-50px);
+            
+
+            &::after{
+                content:'';
+                position: absolute;
+                width:100%;
+                bottom:0;
+                left:0;
+                border-bottom: 2px solid $color-empty;
+                 transform: scaleX(0);
+                 transition-duration: 300ms;
+            }
+
+            &:hover::after{
+                content:'';
+                position: absolute;
+                width:100%;
+                bottom:0;
+                left:0;
+                border-bottom: 2px solid $color-title;
+                transform: scaleX(1);
+                transition-duration: 500ms;
+            }
+
+            &:hover a{
+                color:$color-title;
+            }
+        }
+        
+      
 
         &-link {
             font-family: $font-text;
@@ -27,7 +65,8 @@
             line-height: 30px;
             color: $color-text;
             padding: 6px;
-            border-bottom: 2px solid $color-empty;
+         
+            
         }
     }
 
@@ -40,9 +79,14 @@
         width: 727px;
         height: 306px;
         @include flex($direction:column);
+
+        visibility: hidden;
+        opacity: 0;
 }
 }
 
-.hover{
+
+.active{
     color:$color-title;
+ 
 }

@@ -1,4 +1,27 @@
+.section-realisations-link{
+    &:hover{
+      
+        .article-card{
+            box-shadow: none;
+            transition-duration: 500ms;
+            transform: scale(1.05);
+            &-title{
+            color: $color-title;
+            transition-duration: 500ms;
+            }
+
+            &-img{
+                transition-duration: 500ms;
+                -webkit-filter: grayscale(0%);
+                        filter: grayscale(0%);
+            }
+    }}
+}
+
+
+
 .article-card{
+    transition-duration: 500ms;
     width: 490px;
 height: 588px;
 background: linear-gradient(359.88deg, rgba(255, 255, 255, 0.2263) -0.57%, rgba(255, 255, 255, 0.106046) 82.92%, rgba(255, 255, 255, 0.0744) 100.24%);
@@ -7,6 +30,8 @@ border-radius: 25px;
 @include flex($direction:column, $justify:space-between);
 padding:20px;
 
+
+
 &-title{
 font-family:$font-title;
 font-style: normal;
@@ -14,12 +39,16 @@ font-weight: 400;
 font-size: 30px;
 line-height: 67px;
 text-align: center;
-color: $color-title;
+color: $color-background-dark;
+transition-duration: 500ms;
 }
 
 &-img{
     border-radius: 24px;
+    transition-duration: 500ms;
     width:70%;
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
 }
 
 &-list{
@@ -28,27 +57,25 @@ color: $color-title;
 }
 
 &-item{
-    font-family: $font-text;
+font-family: $font-text;
 font-style: normal;
 font-weight: 600;
 font-size: 14px;
 line-height: 30px;
 letter-spacing: 0.3px;
-
 color: $color-subtitle;
 
 
 }
 
 &-description{
-    font-family: $font-text;
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-
-letter-spacing: 0.3px;
-text-align: justify;
-color: #FFFFFF;
-
+@include paragraph($size:12px, $weight:500);
 }
+}
+
+
+.projet-container{
+position: relative;
+
+   
 }

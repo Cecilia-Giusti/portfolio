@@ -1,8 +1,14 @@
-import ButtonCallToAction from "./ButtonCallToAction";
 import socialIcons from "../data/database.json";
 import SocialNetwork from "./SocialNetwork";
+import ButtonContact from "./ButtonContact";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <footer className='footer'>
       <p className='footer-text'>À bientôt ! </p>
@@ -17,9 +23,9 @@ const Footer = () => {
           })}
         </ul>
 
-        <ButtonCallToAction text='Contactez-moi' url='/' />
+        <ButtonContact />
       </div>
-      <button className='footer-button-top'>
+      <button className='footer-button-top' onClick={scrollToTop}>
         <i className='fa-solid fa-chevron-up'></i>
       </button>
     </footer>
