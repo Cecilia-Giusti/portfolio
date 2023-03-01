@@ -57,6 +57,7 @@
             -webkit-animation-duration: 1s;
             animation-duration: 1s;
             opacity: 0;
+            pointer-events: none;
     }
 
     &-link {
