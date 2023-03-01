@@ -40,7 +40,8 @@ const Header = ({ skillsDom, realisationsDom }: headerInt) => {
     }
   }, []);
 
-  const scrollToSkills = () => {
+  const scrollToSkills = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
     if (skillsDom) {
       const offset = -50;
       window.scrollTo({
@@ -50,7 +51,8 @@ const Header = ({ skillsDom, realisationsDom }: headerInt) => {
     }
   };
 
-  const scrollToRealisations = () => {
+  const scrollToRealisations = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
     if (realisationsDom !== null) {
       window.scrollTo({
         top: realisationsDom.offsetTop,
@@ -73,14 +75,20 @@ const Header = ({ skillsDom, realisationsDom }: headerInt) => {
             </NavLink>
           </li>
           <li className='header-list-item'>
-            <button onClick={scrollToSkills} className='header-list-link'>
+            <a
+              onClick={scrollToSkills}
+              href='#skills'
+              className='header-list-link'>
               Compétences
-            </button>
+            </a>
           </li>
           <li className='header-list-item'>
-            <button onClick={scrollToRealisations} className='header-list-link'>
+            <a
+              href='#realisations'
+              onClick={scrollToRealisations}
+              className='header-list-link'>
               Réalisation
-            </button>
+            </a>
           </li>
         </ul>
         <span className='button-contact-nav' ref={buttonContactMeRef}>
