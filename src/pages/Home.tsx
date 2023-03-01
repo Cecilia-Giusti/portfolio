@@ -16,8 +16,12 @@ const Home = () => {
   const appRef = useRef(null);
   const aboutMeRef = useRef(null);
   const skillsRef = useRef(null);
+  const lastVisitedSection = localStorage.getItem("lastVisitedSection");
 
   useEffect(() => {
+    if (lastVisitedSection) {
+      window.scrollTo({ top: Number(lastVisitedSection), behavior: "auto" });
+    }
     setSkillsSection(document.getElementById("skills"));
     setRealisationsSection(document.getElementById("realisations"));
 
@@ -89,7 +93,7 @@ const Home = () => {
         },
       });
     }
-  }, []);
+  }, [lastVisitedSection]);
 
   return (
     <div className='app' ref={appRef}>

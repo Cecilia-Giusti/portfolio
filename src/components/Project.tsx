@@ -3,16 +3,23 @@ import projects from "../data/database.json";
 import ButtonCallToAction from "./ButtonCallToAction";
 import Subtitle from "./Subtitle";
 import Title from "./Title";
+import { useNavigate } from "react-router-dom";
 
 const Project = () => {
+  const navigate = useNavigate();
+
   const realisations = projects.projects;
   const idProject = Number(useParams().id);
   const realisation = realisations.find((project) => project.id === idProject);
 
+  const handleClose = () => {
+    navigate("/");
+  };
+
   if (realisation !== undefined) {
     return (
       <section className='section-project'>
-        <button className='section-project-close'>
+        <button className='section-project-close' onClick={handleClose}>
           <i className='fa-solid fa-xmark'></i>
         </button>
 
