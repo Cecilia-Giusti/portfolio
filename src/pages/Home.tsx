@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import AboutMe from "../components/AboutMe";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -10,11 +10,17 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
+  const [skillsSection, setSkillsSection] = useState<HTMLElement | null>(null);
+  const [realisationsSection, setRealisationsSection] =
+    useState<HTMLElement | null>(null);
   const appRef = useRef(null);
   const aboutMeRef = useRef(null);
   const skillsRef = useRef(null);
 
   useEffect(() => {
+    setSkillsSection(document.getElementById("skills"));
+    setRealisationsSection(document.getElementById("realisations"));
+
     const aboutMeProperties = { y: "-40vh" };
 
     if (aboutMeRef.current) {
@@ -87,7 +93,7 @@ const Home = () => {
 
   return (
     <div className='app' ref={appRef}>
-      <Header />
+      <Header skillsDom={skillsSection} realisationsDom={realisationsSection} />
       <AboutMe ref={aboutMeRef} />
       <Skills ref={skillsRef} />
       <Realisations />

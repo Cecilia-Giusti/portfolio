@@ -5,7 +5,12 @@ import ButtonContact from "./ButtonContact";
 import Subtitle from "./Subtitle";
 import Title from "./Title";
 
-const Header = () => {
+interface headerInt {
+  skillsDom: HTMLElement | null;
+  realisationsDom: HTMLElement | null;
+}
+
+const Header = ({ skillsDom, realisationsDom }: headerInt) => {
   const headerRef = useRef<HTMLInputElement>(null);
   const buttonContactMeRef = useRef<HTMLInputElement>(null);
   const listRef = useRef([]);
@@ -35,6 +40,25 @@ const Header = () => {
     }
   }, []);
 
+  const scrollToSkills = () => {
+    if (skillsDom) {
+      const offset = -50;
+      window.scrollTo({
+        top: skillsDom.offsetTop + offset,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const scrollToRealisations = () => {
+    if (realisationsDom !== null) {
+      window.scrollTo({
+        top: realisationsDom.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <header className='header' ref={headerRef}>
       <nav className='header-nav'>
@@ -49,22 +73,14 @@ const Header = () => {
             </NavLink>
           </li>
           <li className='header-list-item'>
-            <NavLink
-              to={"/skills"}
-              className={({ isActive }) =>
-                isActive ? "header-list-link active" : "header-list-link"
-              }>
+            <button onClick={scrollToSkills} className='header-list-link'>
               Compétences
-            </NavLink>
+            </button>
           </li>
           <li className='header-list-item'>
-            <NavLink
-              to={"/realisations"}
-              className={({ isActive }) =>
-                isActive ? "header-list-link active" : "header-list-link"
-              }>
+            <button onClick={scrollToRealisations} className='header-list-link'>
               Réalisation
-            </NavLink>
+            </button>
           </li>
         </ul>
         <span className='button-contact-nav' ref={buttonContactMeRef}>
