@@ -22,6 +22,7 @@ interface realisationsInt {
 const Realisations = forwardRef<HTMLDivElement, realisationsInt>(
   (props, ref) => {
     const handleLinkClick = () => {
+      localStorage.setItem("lastVisitedSection", window.scrollY.toString());
       window.scrollTo(0, 0);
     };
 
