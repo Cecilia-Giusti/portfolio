@@ -1,8 +1,12 @@
 import socialIcons from "../data/database.json";
 import SocialNetwork from "./SocialNetwork";
 import ButtonContact from "./ButtonContact";
+import { forwardRef } from "react";
 
-const Footer = () => {
+interface footersInt {
+  ref?: React.RefObject<HTMLDivElement>;
+}
+const Footer = forwardRef<HTMLDivElement, footersInt>((props, ref) => {
   return (
     <footer className='footer'>
       <p className='footer-text'>À bientôt ! </p>
@@ -24,6 +28,6 @@ const Footer = () => {
       </button>
     </footer>
   );
-};
+});
 
 export default Footer;

@@ -1,8 +1,13 @@
 import Title from "./Title";
+import { forwardRef } from "react";
 
-const AboutMe = () => {
+interface aboutmeInt {
+  ref?: React.RefObject<HTMLDivElement>;
+}
+
+const AboutMe = forwardRef<HTMLDivElement, aboutmeInt>((props, ref) => {
   return (
-    <section className='section-aboutMe'>
+    <section className='section-aboutMe' ref={ref}>
       <div className='section-aboutMe-content'>
         <img
           className='section-aboutMe-img'
@@ -29,6 +34,6 @@ const AboutMe = () => {
       </div>
     </section>
   );
-};
+});
 
 export default AboutMe;
