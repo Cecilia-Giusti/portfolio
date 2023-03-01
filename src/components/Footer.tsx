@@ -1,12 +1,14 @@
 import socialIcons from "../data/database.json";
 import SocialNetwork from "./SocialNetwork";
 import ButtonContact from "./ButtonContact";
-import { forwardRef } from "react";
 
-interface footersInt {
-  ref?: React.RefObject<HTMLDivElement>;
-}
-const Footer = forwardRef<HTMLDivElement, footersInt>((props, ref) => {
+const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <footer className='footer'>
       <p className='footer-text'>À bientôt ! </p>
@@ -23,11 +25,11 @@ const Footer = forwardRef<HTMLDivElement, footersInt>((props, ref) => {
 
         <ButtonContact />
       </div>
-      <button className='footer-button-top'>
+      <button className='footer-button-top' onClick={scrollToTop}>
         <i className='fa-solid fa-chevron-up'></i>
       </button>
     </footer>
   );
-});
+};
 
 export default Footer;
