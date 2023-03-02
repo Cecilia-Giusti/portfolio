@@ -13,4 +13,15 @@
     text-align: justify;
     letter-spacing: 0.3px;
     color:$color-text; 
+
+    @media screen and (max-width: 940px) {
+        font-size: $size - 2px;
+      }
+
+    @media screen and (max-width: 600px) {
+        font-size: $size - 4px;
+      }
+    @media screen and (max-width: 300px) {
+        font-size: $size - 6px;
+      }
 }

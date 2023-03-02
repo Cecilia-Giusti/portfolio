@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import ButtonContact from "./ButtonContact";
 import Subtitle from "./Subtitle";
 import Title from "./Title";
+import { useEffect, useState } from "react";
 
 interface headerInt {
   skillsDom: HTMLElement | null;
@@ -15,6 +16,12 @@ const Header = ({ skillsDom, realisationsDom }: headerInt) => {
   const buttonContactMeRef = useRef<HTMLInputElement>(null);
   const listRef = useRef([]);
   const title = useRef(null);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [navOpen, setNavOpen] = useState(false);
+
+  useEffect(() => {
+    setScreenWidth(window.screen.width);
+  }, []);
 
   useLayoutEffect(() => {
     if (headerRef.current !== null) {
@@ -63,38 +70,90 @@ const Header = ({ skillsDom, realisationsDom }: headerInt) => {
 
   return (
     <header className='header' ref={headerRef}>
-      <nav className='header-nav'>
-        <ul className='header-list'>
-          <li className='header-list-item'>
-            <NavLink
-              to={"/"}
-              className={({ isActive }) =>
-                isActive ? "header-list-link active" : "header-list-link"
-              }>
-              Accueil
-            </NavLink>
-          </li>
-          <li className='header-list-item'>
-            <a
-              onClick={scrollToSkills}
-              href='#skills'
-              className='header-list-link'>
-              Compétences
-            </a>
-          </li>
-          <li className='header-list-item'>
-            <a
-              href='#realisations'
-              onClick={scrollToRealisations}
-              className='header-list-link'>
-              Réalisation
-            </a>
-          </li>
-        </ul>
-        <span className='button-contact-nav' ref={buttonContactMeRef}>
-          <ButtonContact />
-        </span>
-      </nav>
+      {screenWidth < 500 ? (
+        navOpen ? (
+          <div className='header-small'>
+            <button
+              className='header-small-button-close'
+              onClick={() => setNavOpen(false)}>
+              {" "}
+              <i className='fa-solid fa-xmark'></i>
+            </button>
+
+            <nav className=' header-small-nav'>
+              <ul className='header-small-list'>
+                <li className='header-small-list-item'>
+                  <NavLink
+                    to={"/"}
+                    className={({ isActive }) =>
+                      isActive
+                        ? "header-small-list-link active"
+                        : "header-small-list-link"
+                    }>
+                    Accueil
+                  </NavLink>
+                </li>
+                <li className='header-small-list-item'>
+                  <a
+                    onClick={scrollToSkills}
+                    href='#skills'
+                    className='header-small-list-link'>
+                    Compétences
+                  </a>
+                </li>
+                <li className='header-small-list-item'>
+                  <a
+                    href='#realisations'
+                    onClick={scrollToRealisations}
+                    className='header-small-list-link'>
+                    Réalisation
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        ) : (
+          <button
+            className='header-button-nav'
+            onClick={() => setNavOpen(true)}>
+            <i className='fa-solid fa-bars'></i>
+          </button>
+        )
+      ) : (
+        <nav className='header-nav'>
+          <ul className='header-list'>
+            <li className='header-list-item'>
+              <NavLink
+                to={"/"}
+                className={({ isActive }) =>
+                  isActive ? "header-list-link active" : "header-list-link"
+                }>
+                Accueil
+              </NavLink>
+            </li>
+            <li className='header-list-item'>
+              <a
+                onClick={scrollToSkills}
+                href='#skills'
+                className='header-list-link'>
+                Compétences
+              </a>
+            </li>
+            <li className='header-list-item'>
+              <a
+                href='#realisations'
+                onClick={scrollToRealisations}
+                className='header-list-link'>
+                Réalisation
+              </a>
+            </li>
+          </ul>
+          <span className='button-contact-nav' ref={buttonContactMeRef}>
+            <ButtonContact />
+          </span>
+        </nav>
+      )}
+
       <div className='header-title' ref={title}>
         <Title text='Cécilia Giusti' numberTitle={3} />
         <Subtitle text='Développeuse Front-End' numberSubtitle={4} />

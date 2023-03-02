@@ -1,21 +1,49 @@
 .section-aboutMe {
-    z-index:1;
+    z-index: 1;
     width: 100%;
     background: linear-gradient(113.49deg, #227C9D -30.3%, #0E3B4A 58.12%);
     @include flex;
     height: 100vh;
-    
+
+    @media screen and (max-width: 500px) {
+        min-height: 120vh;
+    }
+
+
+
 
     &-content {
         @include flex;
         width: 80%;
         gap: 70px;
+
+        @media screen and (max-width:840px) {
+            gap: 22px;
+            width: 90%;
+        }
+
+        @media screen and (max-width: 700px) {
+            @include flex($direction: column);
+            gap: 25px;
+        }
+
+        @media screen and (max-width:500px) {
+            width: 95%;
+        }
     }
 
-    &-img{
+    &-img {
         transform: translateX(-200px);
         visibility: hidden;
         opacity: 0;
+
+        @media screen and (max-width:840px) {
+            width: 50%;
+        }
+
+        @media screen and (max-width:500px) {
+            width: 60%;
+        }
     }
 
     &-text {
@@ -24,20 +52,41 @@
         visibility: hidden;
         opacity: 0;
 
+        @media screen and (max-width: 970px) {
+            width: 80%;
+        }
+
+        @media screen and (max-width: 840px) {
+            width: 90%;
+        }
+
+        @media screen and (max-width: 700px) {
+            text-align: center;
+        }
+
     }
 
     &-paragraph {
         @include paragraph;
+
+        @media screen and (max-width:840px) {
+            margin-top: 20px;
+        }
+
     }
 }
 
 .section-skills {
-    z-index:100;
+    z-index: 100;
     width: 100%;
     background: #161A1E;
     @include flex;
     height: 100vh;
     position: relative;
+
+    @media screen and (max-width: 500px) {
+        min-height: 120vh;
+    }
 
     &-content {
         @include flex($direction: column, $align: center);
@@ -45,73 +94,107 @@
         gap: 30px;
         opacity: 0;
         visibility: hidden;
-       
+
+        @media screen and (max-width: 840px) {
+            width: 90%;
+        }
+
+        @media screen and (max-width: 500px) {
+            width: 95%;
+        }
+
+
+
 
         h2 {
             color: $color-hightlight;
             align-self: flex-start;
         }
 
-        button{
+        button {
             align-self: center;
         }
     }
 
     &-article {
-        @include flex($justify: space-between, $align:stretch);
+        @include flex($justify: space-between, $align: stretch);
         gap: 50px;
+
+        @media screen and (max-width: 1100px) {
+            align-items: center;
+        }
+
+        @media screen and (max-width: 900px) {
+            margin-bottom: 36px;
+        }
+
+        @media screen and (max-width: 840px) {
+            flex-direction: column;
+        }
     }
 
     &-text {
         @include paragraph;
         width: 60%;
+
+        @media screen and (max-width: 840px) {
+            width: 90%;
+        }
     }
 
     &-card {
         background: linear-gradient(359.88deg, rgba(255, 255, 255, 0.2263) -0.57%, rgba(255, 255, 255, 0.106046) 82.92%, rgba(255, 255, 255, 0.0744) 100.24%);
         box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
         border-radius: 25px;
-        padding:10px;
+        padding: 10px;
         @include flex;
+
+        @media screen and (max-width: 1100px) {
+            height: 500px;
+        }
+
+        @media screen and (max-width: 350px) {
+            height: 380px;
+        }
     }
 
-    &-list{
-        @include flex($direction:column,$align:flex-start, $justify:flex-start);
-    gap:20px;
+    &-list {
+        @include flex($direction: column, $align: flex-start, $justify: space-around);
+        height: 100%;
     }
 
-   &-item div{
-        @include flex($justify:flex-start);
-        gap:10px;
-       }
-   
+    &-item div {
+        @include flex($justify: flex-start);
+        gap: 10px;
+    }
 
-    &-circle{
+
+    &-circle {
         width: 20px;
         height: 20px;
         border-radius: 50%;
         background-color: #17C3B2;
     }
 
-    &-skill{
+    &-skill {
         @include paragraph;
         text-align: left;
     }
 }
 
 .section-realisations {
+    z-index: 300;
     width: 100%;
     background: linear-gradient(113.49deg, #227C9D -30.3%, #0E3B4A 58.12%);
-    @include flex($direction:column, $justify:flex-start);
-    padding-top:100px;
-    padding-bottom:100px;
-    gap:50px;
+    @include flex($direction: column, $justify: flex-start);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    gap: 50px;
     min-height: 100vh;
 
-    &-content{
+    &-content {
         @include flex;
-        gap:30px;
+        gap: 30px;
         flex-wrap: wrap;
     }
 }
-

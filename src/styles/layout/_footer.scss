@@ -62,6 +62,12 @@
         border-radius: 30px;
         transition-duration: 500ms;
 
+        @media screen and (max-width: 380px) {
+            left:50%;
+            top: 104px;
+            transform: translateX(-50%);
+          }
+
         i {
             color: $color-title;
             transition-duration: 500ms;
