@@ -1,3 +1,6 @@
+import { useState, useEffect } from "react";
+import { truncateString } from "../utils/truncateString";
+
 interface projetCardInt {
   name: string;
   img: string;
@@ -9,11 +12,11 @@ const ProjetCard = ({ name, img, description, stack }: projetCardInt) => {
   return (
     <article className='article-card'>
       <p className='article-card-title'>{name}</p>
-      <img
-        src={img}
-        alt='Mockup de la maquette de Kasa'
-        className='article-card-img'
-      />
+      <div className='article-card-img'>
+        {" "}
+        <img src={img} alt={`Mockup de la maquette de ${name.split(" ")[0]}`} />
+      </div>
+
       <ul className='article-card-list'>
         {stack.map((item, id) => {
           if (id === 0) {

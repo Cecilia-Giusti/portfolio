@@ -4,7 +4,8 @@ import ProjectCard from "./ProjectCard";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { forwardRef } from "react";
+import { forwardRef, useEffect, useState } from "react";
+import { truncateString } from "../utils/truncateString";
 gsap.registerPlugin(ScrollTrigger);
 
 interface Project {
@@ -26,6 +27,11 @@ const Realisations = forwardRef<HTMLDivElement, realisationsInt>(
       window.scrollTo(0, 0);
     };
 
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+    useEffect(() => {
+      setScreenWidth(window.screen.width);
+    }, []);
+
     return (
       <section className='section-realisations' id='realisations'>
         <Title text='RÉALISATIONS' numberTitle={2} />
@@ -42,9 +48,17 @@ const Realisations = forwardRef<HTMLDivElement, realisationsInt>(
                   onClick={handleLinkClick}
                   className='section-realisations-link'>
                   <ProjectCard
-                    name={project.name}
+                    name={
+                      screenWidth < 400
+                        ? project.name.split(" ")[0]
+                        : project.name
+                    }
                     img={project.img}
-                    description={project.description}
+                    description={
+                      screenWidth < 400
+                        ? truncateString(project.description, 400)
+                        : project.description
+                    }
                     stack={project.stack}
                   />
                 </Link>
