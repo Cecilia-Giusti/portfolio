@@ -16,16 +16,31 @@
         width: 80%;
         gap: 70px;
 
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width:840px) {
+           gap:22px;
+           width: 90%;
+        }
+
+        @media screen and (max-width: 700px) {
             @include flex($direction:column);
            gap:25px;
         }
+
+        @media screen and (max-width:500px) {
+            width: 95%;
+         }
     }
 
     &-img{
         transform: translateX(-200px);
         visibility: hidden;
         opacity: 0;
+        @media screen and (max-width:840px) {
+            width: 50%;
+         }
+         @media screen and (max-width:500px) {
+            width: 60%;
+         }
     }
 
     &-text {
@@ -34,18 +49,25 @@
         visibility: hidden;
         opacity: 0;
 
-        @media screen and (max-width: 500px) {
-            width: 90%;
+        @media screen and (max-width: 970px) {
+            width:80%;
+          }
+
+        @media screen and (max-width: 700px) {
             text-align: center;
         }
+        @media screen and (max-width:500px) {
+            width: 90%;
+         }
 
     }
 
     &-paragraph {
         @include paragraph;
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width:840px) {
             margin-top:20px;
-        }
+         }
+        
     }
 }
 
