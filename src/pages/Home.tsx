@@ -9,29 +9,24 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Home = () => {
+interface homeInt {
+  setLastVisitedSection: React.Dispatch<React.SetStateAction<number>>;
+  lastVisitedSection: number;
+}
+
+const Home = ({ setLastVisitedSection, lastVisitedSection }: homeInt) => {
   const [skillsSection, setSkillsSection] = useState<HTMLElement | null>(null);
   const [realisationsSection, setRealisationsSection] =
     useState<HTMLElement | null>(null);
   const appRef = useRef(null);
   const aboutMeRef = useRef(null);
   const skillsRef = useRef(null);
-  const lastVisitedSection = localStorage.getItem("lastVisitedSection");
 
   useEffect(() => {
-    if (lastVisitedSection) {
-      window.scrollTo({ top: Number(lastVisitedSection), behavior: "auto" });
-    }
-
-    window.onbeforeunload = () => {
-      localStorage.removeItem("lastVisitedSection");
-    };
-    window.onunload = () => {
-      localStorage.removeItem("lastVisitedSection");
-      window.scrollTo(0, 0);
-    };
     setSkillsSection(document.getElementById("skills"));
     setRealisationsSection(document.getElementById("realisations"));
+
+    window.scrollTo({ top: lastVisitedSection, behavior: "auto" });
 
     const aboutMeProperties = { y: "-40vh" };
 
@@ -108,7 +103,7 @@ const Home = () => {
       <Header skillsDom={skillsSection} realisationsDom={realisationsSection} />
       <AboutMe ref={aboutMeRef} />
       <Skills ref={skillsRef} />
-      <Realisations />
+      <Realisations setLastVisitedSection={setLastVisitedSection} />
       <Footer />
     </div>
   );
