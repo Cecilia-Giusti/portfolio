@@ -13,4 +13,8 @@
     text-align: justify;
     letter-spacing: 0.3px;
     color:$color-text; 
+
+    @media screen and (max-width: 900px) {
+        font-size: $size - 4px;
+    }
 }

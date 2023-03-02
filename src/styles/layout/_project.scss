@@ -6,6 +6,9 @@
     min-height: 100vh;
     position: relative;
     padding-bottom: 50px;
+    @media screen and (max-width: 500px) {
+         min-height: 120vh;
+    }
 
     &-close {
         position: absolute;

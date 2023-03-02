@@ -4,12 +4,22 @@
     background: linear-gradient(113.49deg, #227C9D -30.3%, #0E3B4A 58.12%);
     @include flex;
     height: 100vh;
+    @media screen and (max-width: 500px) {
+         min-height: 120vh;
+    }
+
+   
     
 
     &-content {
         @include flex;
         width: 80%;
         gap: 70px;
+
+        @media screen and (max-width: 500px) {
+            @include flex($direction:column);
+           gap:25px;
+        }
     }
 
     &-img{
@@ -24,10 +34,18 @@
         visibility: hidden;
         opacity: 0;
 
+        @media screen and (max-width: 500px) {
+            width: 90%;
+            text-align: center;
+        }
+
     }
 
     &-paragraph {
         @include paragraph;
+        @media screen and (max-width: 500px) {
+            margin-top:20px;
+        }
     }
 }
 
@@ -38,6 +56,9 @@
     @include flex;
     height: 100vh;
     position: relative;
+    @media screen and (max-width: 500px) {
+         min-height: 120vh;
+    }
 
     &-content {
         @include flex($direction: column, $align: center);
@@ -45,6 +66,8 @@
         gap: 30px;
         opacity: 0;
         visibility: hidden;
+
+      
        
 
         h2 {
@@ -60,6 +83,10 @@
     &-article {
         @include flex($justify: space-between, $align:stretch);
         gap: 50px;
+
+        @media screen and (max-width: 900px) {
+            margin-bottom:36px;
+         }
     }
 
     &-text {
