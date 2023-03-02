@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  -webkit-margin-before: 0;
+  margin-block-start: 0;
+  -webkit-margin-after: 0;
+  margin-block-end: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+  @media screen and (max-width: 500px) {
+     min-height: 120vh;
+}
+}
+
+#root {
+
+  width: 100%;
+  margin: 0 auto;
+}
+
+ul {
+  -webkit-padding-start: 0;
+  padding-inline-start: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+h1{
+  font-family: $font-title;
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 180%;
+letter-spacing: 0.3px;
+color: $color-title;
+@media screen and (max-width: 940px) {
+  font-size: 34px;
+}
+
+@media screen and (max-width: 900px) {
+  font-size: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  font-size: 26px;
+}
+}
+
+h2 {
+  font-family: $font-title;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 0.3px;
+  color: $color-title;
+  @media screen and (max-width: 940px) {
+    font-size: 34px;
+  }
+  
+  @media screen and (max-width: 900px) {
+    font-size: 30px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    font-size: 26px;
+  }
+}
+
+
+h3 {
+  font-family: $font-title;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  letter-spacing: 0.3px;
+  color: $color-title;
+  @media screen and (max-width: 900px) {
+    font-size: 40px;
+}
+@media screen and (max-width: 580px) {
+    font-size: 30px;
+}
+@media screen and (max-width: 375px) {
+  font-size: 28px;
+}
+ 
+
+}
+
+h4{
+font-family: $font-text;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+letter-spacing: 0.3px;
+color: $color-subtitle;
+@media screen and (max-width: 900px) {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 580px) {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 375px) {
+  font-size: 12px;
+}
+}
+
+button{
+  border:none;
+  background: none;
+  cursor: pointer;
+}
+
+.app{
+  background:$color-background-dark;
+}

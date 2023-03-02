@@ -1,0 +1,27 @@
+@mixin flex($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin paragraph($weight: 400, $size:20px){
+    font-family:$font-text;
+    font-style: normal;
+    font-weight: $weight;
+    font-size: $size;
+    text-align: justify;
+    letter-spacing: 0.3px;
+    color:$color-text; 
+
+    @media screen and (max-width: 940px) {
+        font-size: $size - 2px;
+      }
+
+    @media screen and (max-width: 600px) {
+        font-size: $size - 4px;
+      }
+    @media screen and (max-width: 300px) {
+        font-size: $size - 6px;
+      }
+}

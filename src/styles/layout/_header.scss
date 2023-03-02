@@ -1,0 +1,198 @@
+.header {
+    @include flex($justify:flex-start, $direction:column, $align:flex-end);
+    width: 100%;
+    background: url("./assets/images/background-image.webp") no-repeat
+    center/cover;
+    height: 100vh;
+    position: relative;
+
+    @media screen and (max-width: 500px) {
+        min-height: 120vh;
+    }
+
+    &-nav{
+        @include flex;
+        margin-top:20px;
+        margin-right:20px;
+        gap:30px;
+        
+    }
+
+    &-list {
+        @include flex;
+        gap:30px;
+    
+
+        
+
+        &-item{
+            position: relative;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(-50px);
+            
+
+            &::after{
+                content:'';
+                position: absolute;
+                width:100%;
+                bottom:0;
+                left:0;
+                border-bottom: 2px solid $color-empty;
+                 transform: scaleX(0);
+                 transition-duration: 300ms;
+            }
+
+            &:hover::after{
+                content:'';
+                position: absolute;
+                width:100%;
+                bottom:0;
+                left:0;
+                border-bottom: 2px solid $color-title;
+                transform: scaleX(1);
+                transition-duration: 500ms;
+            }
+
+            &:hover a{
+                color:$color-title;
+            }
+        }
+        
+      
+
+        &-link {
+            font-family: $font-text;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 30px;
+            color: $color-text;
+            padding: 6px;
+         
+            
+        }
+    }
+
+    &-title{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(180deg, rgba(22, 26, 30, 0.77) 0%, rgba(22, 26, 30, 0.459473) 84.9%, rgba(22, 26, 30, 0) 100%);
+        width: 727px;
+        height: 306px;
+        @include flex($direction:column);
+
+        visibility: hidden;
+        opacity: 0;
+
+        @media screen and (max-width: 900px) {
+            width: 539px;
+            height: 292px;
+        }
+
+        @media screen and (max-width: 580px) {
+            width: 442px;
+            height: 226px;
+        }
+
+        @media screen and (max-width: 500px) {
+            top:40%;
+            width: 358px;
+            height: 160px;
+        }
+
+        @media screen and (max-width: 375px) {
+            width: 305px;
+            height: 140px;
+        }
+}
+}
+
+
+.active{
+    color:$color-title;
+ 
+}
+.header-button-nav{
+    margin-top:20px;
+    margin-right:20px;
+
+    &:hover{
+        i{
+            color:$color-title;
+            transform: scale(1.06);
+        }
+    }
+    i{
+        font-size: 30px;
+        color:$color-text;
+    }
+}
+
+.header-small{
+    @include flex($direction:column);
+
+    &-button-close{
+        margin-top:20px;
+        margin-right:20px;
+        align-self: flex-end;
+
+        &:hover{
+            i{
+                color:$color-title;
+                transform: scale(1.06);
+            }
+        }
+
+        i{
+            font-size: 30px;
+            color:$color-text;
+
+
+        }
+    }
+    &-nav{
+        @include flex($direction:column);
+        margin-top:10px;
+        margin-right:20px;
+        gap:30px;
+        background-color: $color-button-chevronUp;
+        border-radius: 20px;
+        padding: 20px;
+        transition-duration: 500ms;
+
+    }
+
+    &-list {
+        @include flex($direction:column, $align:flex-end);
+        gap:30px;
+
+        &-link {
+            font-family: $font-text;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 30px;
+            color: $color-text;
+            padding: 6px;
+         
+            
+        }
+
+        .active{
+            color:$color-title;
+         
+        }
+
+        &:hover{
+            color:$color-title;
+        }
+        &:active{
+            color:$color-title;
+        }
+    }
+
+    
+}

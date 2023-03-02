@@ -1,8 +1,10 @@
-@import "./utils/fonts";
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./utils/settings";
+@import "./components/buttons";
+@import "./components/projectCard";
 @import "./layout/header";
 @import "./layout/footer";
+@import "./layout/project";
 @import "./pages/home";
 @import "./pages/error";

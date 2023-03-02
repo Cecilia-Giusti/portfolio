@@ -1,0 +1,114 @@
+.footer {
+    min-height: 30vh;
+    background-color: $color-background-dark;
+    @include flex($direction: column, $justify: flex-start);
+    gap: 100px;
+    position: relative;
+    padding-top:30px;
+    padding-bottom:30px;
+
+    &-text {
+        font-family: $font-title;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 67px;
+        text-align: center;
+        color: $color-title;
+    }
+
+    &-callToAction {
+        width: 80%;
+        @include flex($justify: space-between);
+    }
+
+    &-list {
+        @include flex;
+        gap: 10px;
+    }
+
+    &-item-button {
+        background-color: $color-buttons-socialNetworks;
+        border-radius: 25px;
+        width: 35px;
+        height: 35px;
+        transition-duration: 500ms;
+
+        &:hover{
+            background-color: $color-title;
+            transform: translateY(-10px);
+         
+            transition-duration: 500ms;
+
+            i{
+                transform: scale(1.08);
+                transition-duration: 500ms;
+            }
+        }
+
+        i {
+            color: $color-text;
+            font-size:20px;
+        }
+    }
+
+    &-button-top {
+        position: absolute;
+        top:15%;
+        right: 10%;
+        transform: translate(-15%, -10%);
+        width: 50px;
+        height: 50px;
+        background: $color-button-chevronUp;
+        border-radius: 30px;
+        transition-duration: 500ms;
+
+        @media screen and (max-width: 380px) {
+            left:50%;
+            top: 104px;
+            transform: translateX(-50%);
+          }
+
+        i {
+            color: $color-title;
+            transition-duration: 500ms;
+            font-size: 20px;
+            transform-origin: center;
+        }
+
+
+        &:hover{
+            background: $color-title;
+            transition-duration: 500ms;
+
+            i{
+                transition-duration: 500ms;
+                color: $color-button-chevronUp;
+                transform: rotate(360deg);
+                transform-origin: center; 
+            }
+           
+        }
+    }
+&-creater{
+width: 100%;
+@include flex($direction:column);
+
+    &-design{
+        @include paragraph($size:10px);
+        text-align: center;
+        color:$color-subtitle;
+        span{
+            color:red
+        }
+    }
+
+    &-copyright{
+        @include paragraph($size:10px);
+        text-align: center;
+        color:$color-subtitle;
+    }
+    
+}
+   
+}

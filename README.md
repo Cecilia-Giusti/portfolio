@@ -30,3 +30,7 @@ My personal portfolio uses the following tech stack:
 # Author
 
 Cécilia Giusti
+
+# History
+
+V1 : Lunch project
