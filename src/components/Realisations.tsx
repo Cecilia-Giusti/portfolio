@@ -1,7 +1,7 @@
 import Title from "./Title";
 import projects from "../data/database.json";
 import ProjectCard from "./ProjectCard";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { forwardRef, useEffect, useState } from "react";
@@ -18,12 +18,19 @@ interface Project {
 
 interface realisationsInt {
   ref?: React.RefObject<HTMLDivElement>;
+  setLastVisitedSection: React.Dispatch<React.SetStateAction<number>>;
 }
 
 const Realisations = forwardRef<HTMLDivElement, realisationsInt>(
   (props, ref) => {
-    const handleLinkClick = () => {
-      localStorage.setItem("lastVisitedSection", window.scrollY.toString());
+    const navigate = useNavigate();
+    const handleLinkClick = (
+      event: { preventDefault: () => void },
+      id: number
+    ) => {
+      event.preventDefault();
+      props.setLastVisitedSection(window.pageYOffset);
+      navigate(`/mes-projets/${id}`);
       window.scrollTo(0, 0);
     };
 
@@ -45,7 +52,7 @@ const Realisations = forwardRef<HTMLDivElement, realisationsInt>(
                 key={id}>
                 <Link
                   to={`/mes-projets/${project.id}`}
-                  onClick={handleLinkClick}
+                  onClick={(event) => handleLinkClick(event, project.id)}
                   className='section-realisations-link'>
                   <ProjectCard
                     name={
