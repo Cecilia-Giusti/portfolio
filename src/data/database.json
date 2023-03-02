@@ -24,7 +24,7 @@
     {
       "id": 2,
       "name": "OhmyFood - Projet OC",
-      "maquettes": "./assets/images/projects/maquettes-ohmyfood.png",
+      "maquettes": "./assets/images/projects/maquette-ohmyfood.png",
       "livrables": "https://github.com/Cecilia-Giusti/CeciliaGiusti_3_01_02_2022",
       "img": "./assets/images/projects/ohmyfood.jpg",
       "url": "https://cecilia-giusti.github.io/CeciliaGiusti_3_01_02_2022/",
@@ -35,13 +35,13 @@
     {
       "id": 3,
       "livrables": "https://github.com/Cecilia-Giusti/P-14-wealth-health",
-      "maquettes": "./assets/images/projects/maquettes-wealth-health.png",
+      "maquettes": "./assets/images/projects/maquette-wealth-health.png",
       "name": "Wealth-Health - Projet OC",
-      "img": "./assets/images/projects/kasa.jpeg",
+      "img": "./assets/images/projects/wealth-health.webp",
       "url": "https://cecilia-giusti.github.io/P-14-wealth-health/",
-      "description": "Kasa est une entreprise reconnue en France pour son rôle de leader dans la location d'appartements entre particuliers. Avec son expertise et son expérience, elle offre une solution pratique et économique pour les propriétaires et les locataires en quête de logements de qualité. Kasa se distingue par son approche personnalisée et sa connaissance approfondie du marché immobilier français, ce qui lui permet de répondre efficacement aux besoins de chacun. Que vous soyez un propriétaire souhaitant louer votre bien immobilier ou un locataire cherchant un logement confortable et abordable, Kasa est la référence incontournable pour la location d'appartements entre particuliers en France.",
+      "description": "Wealth Health est une grande société financière qui utilise une application web interne appelée HRnet pour gérer les dossiers de ses employés. Cependant, cette application est ancienne et utilise jQuery côté front end, ce qui entraîne des problèmes techniques et des plaintes de la part des utilisateurs en interne. Pour remédier à cette situation, l'équipe de développement travaille activement sur la mise à niveau de l'application depuis un certain temps. Cette mise à niveau est essentielle pour améliorer l'expérience utilisateur et garantir un fonctionnement optimal de l'application dans le cadre des activités de Wealth Health.",
       "stack": ["React", "TypeScript", "SASS"],
-      "specifications": "Le projet Kasa, développé en utilisant la technologie React, devait respecter des spécifications et des contraintes strictes afin de répondre aux besoins de ses utilisateurs. Les composants React ont été soigneusement sélectionnés et intégrés pour offrir une expérience utilisateur optimale. Le React router a été utilisé pour gérer la navigation de manière fluide et efficace. De plus, les maquettes ont été suivies de manière rigoureuse pour s'assurer que l'interface graphique était cohérente et facile à utiliser.La conception de l'application a également été pensée pour être responsive, c'est-à-dire qu'elle s'adapte à tous les types d'écrans et de périphériques, afin d'offrir une expérience utilisateur optimale, peu importe le contexte. Aucune librairie externe n'a été utilisée afin de garantir une stabilité et une sécurité maximales de l'application. Le découpage par composant modulaire a été adopté pour faciliter la maintenance et l'évolutivité du code. Chaque fonctionnalité a été divisée en composants indépendants, ce qui permet de les réutiliser facilement dans d'autres parties de l'application. Enfin, une page 404 a été intégrée pour offrir une expérience utilisateur optimale, même en cas d'erreur ou de page manquante. En somme, le projet Kasa a été développé en suivant scrupuleusement toutes les spécifications et contraintes imposées pour offrir une expérience utilisateur optimale, stable et sécurisée."
+      "specifications": "Le projet WealthHealth consiste en la mise à niveau de l'application web interne HRnet utilisée pour gérer les dossiers des employés de l'entreprise. Pour ce faire, plusieurs spécifications et contraintes ont été définies. Tout d'abord, le projet implique la conversion de l'application existante en utilisant React et TypeScript pour créer deux nouvelles pages : Create employee et Employee list. En outre, le projet nécessite l'ajout d'un système de gestion d'état, en l'occurrence Redux, pour garantir une meilleure gestion des données et une expérience utilisateur améliorée. Le design de l'application sera également changé selon les préférences de l'équipe de développement. Le projet implique également la mise en place de tests unitaires et d'intégration pour garantir un fonctionnement optimal de l'application. Les plugins utilisés dans l'application actuelle seront convertis en utilisant des bibliothèques externes, tandis qu'une bibliothèque externe sera créée pour assurer une meilleure maintenance et évolutivité de l'application. Enfin, un audit de performance sera réalisé en utilisant Lighthouse pour s'assurer que l'application répond aux normes de performance requises. Dans l'ensemble, le projet WealthHealth vise à améliorer l'expérience utilisateur de l'application HRnet tout en garantissant un fonctionnement optimal et une maintenance facile."
     }
   ],
   "socialNetwork": [
