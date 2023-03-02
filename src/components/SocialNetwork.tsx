@@ -7,7 +7,7 @@ interface socialNetworkInt {
 
 const SocialNetwork = ({ url, logo }: socialNetworkInt) => {
   return (
-    <Link to={url} className='footer-item-link'>
+    <Link to={url} className='footer-item-link' target={"_blank"}>
       <button className='footer-item-button'>
         <i className={logo}></i>
       </button>
