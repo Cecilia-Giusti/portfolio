@@ -17,7 +17,11 @@ const Footer = () => {
           {socialIcons.socialNetwork.map((item, id) => {
             return (
               <li className='footer-item' key={id}>
-                <SocialNetwork url={item.url} logo={item.logo} />
+                <SocialNetwork
+                  url={item.url}
+                  logo={item.logo}
+                  name={item.name}
+                />
               </li>
             );
           })}
@@ -34,7 +38,10 @@ const Footer = () => {
           &copy; 2023 ceciliagiusti Tous droits réservés.
         </p>
       </div>
-      <button className='footer-button-top' onClick={scrollToTop}>
+      <button
+        className='footer-button-top'
+        aria-label='to up'
+        onClick={scrollToTop}>
         <i className='fa-solid fa-chevron-up'></i>
       </button>
     </footer>

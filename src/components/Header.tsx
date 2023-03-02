@@ -74,6 +74,7 @@ const Header = ({ skillsDom, realisationsDom }: headerInt) => {
         navOpen ? (
           <div className='header-small'>
             <button
+              aria-label='Close the nav'
               className='header-small-button-close'
               onClick={() => setNavOpen(false)}>
               {" "}
@@ -115,6 +116,7 @@ const Header = ({ skillsDom, realisationsDom }: headerInt) => {
         ) : (
           <button
             className='header-button-nav'
+            aria-label='Open the nav'
             onClick={() => setNavOpen(true)}>
             <i className='fa-solid fa-bars'></i>
           </button>
