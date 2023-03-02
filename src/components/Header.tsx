@@ -146,7 +146,7 @@ const Header = ({ skillsDom, realisationsDom }: headerInt) => {
                 href='#realisations'
                 onClick={scrollToRealisations}
                 className='header-list-link'>
-                Réalisation
+                Réalisations
               </a>
             </li>
           </ul>
