@@ -1,6 +1,3 @@
-import { useState, useEffect } from "react";
-import { truncateString } from "../utils/truncateString";
-
 interface projetCardInt {
   name: string;
   img: string;
