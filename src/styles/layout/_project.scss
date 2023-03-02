@@ -61,6 +61,10 @@
         @include paragraph($size: 14px);
         line-height: 180%;
         padding: 30px;
+
+        @media screen and (max-width: 500px) {
+           font-size: 14px;
+       }
     }
 
     &-buttons {

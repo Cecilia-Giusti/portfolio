@@ -101,12 +101,19 @@ width: 100%;
         span{
             color:red
         }
+
+        @media screen and (max-width: 500px) {
+           font-size: 10px;
+       }
     }
 
     &-copyright{
         @include paragraph($size:10px);
         text-align: center;
         color:$color-subtitle;
+        @media screen and (max-width: 500px) {
+            font-size: 10px;
+        }
     }
     
 }
