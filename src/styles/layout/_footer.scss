@@ -1,10 +1,11 @@
 .footer {
-    height: 30vh;
+    min-height: 30vh;
     background-color: $color-background-dark;
     @include flex($direction: column, $justify: flex-start);
     gap: 100px;
     position: relative;
     padding-top:30px;
+    padding-bottom:30px;
 
     &-text {
         font-family: $font-title;
@@ -89,4 +90,25 @@
            
         }
     }
+&-creater{
+width: 100%;
+@include flex($direction:column);
+
+    &-design{
+        @include paragraph($size:10px);
+        text-align: center;
+        color:$color-subtitle;
+        span{
+            color:red
+        }
+    }
+
+    &-copyright{
+        @include paragraph($size:10px);
+        text-align: center;
+        color:$color-subtitle;
+    }
+    
+}
+   
 }

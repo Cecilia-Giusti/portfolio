@@ -25,6 +25,15 @@ const Footer = () => {
 
         <ButtonContact />
       </div>
+      <div className='footer-creater'>
+        {" "}
+        <p className='footer-creater-design'>
+          Design with <span>&#x2764;</span> by Cécilia Giusti
+        </p>
+        <p className='footer-creater-copyright'>
+          &copy; 2023 ceciliagiusti Tous droits réservés.
+        </p>
+      </div>
       <button className='footer-button-top' onClick={scrollToTop}>
         <i className='fa-solid fa-chevron-up'></i>
       </button>
