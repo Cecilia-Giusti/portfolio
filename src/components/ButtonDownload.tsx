@@ -5,9 +5,15 @@ interface ButtonDownloadInt {
 }
 
 const ButtonDownload = ({ text, url, file }: ButtonDownloadInt) => {
+  const handleClick = () => {
+    const link = document.getElementById("downloadCV");
+    if (link) {
+      link.click();
+    }
+  };
   return (
-    <button className='button'>
-      <a className='button-link' href={url} download={file}>
+    <button className='button' onClick={handleClick}>
+      <a className='button-link' href={url} id='downloadCV' download={file}>
         {text}
       </a>
     </button>
