@@ -64,7 +64,17 @@ h2 {
   font-size: 40px;
   letter-spacing: 0.3px;
   color: $color-title;
- 
+  @media screen and (max-width: 940px) {
+    font-size: 34px;
+  }
+  
+  @media screen and (max-width: 900px) {
+    font-size: 30px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    font-size: 26px;
+  }
 }
 
 
