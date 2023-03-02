@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 
 interface ButtonCallToActionInt {
   text: string;
@@ -6,9 +7,16 @@ interface ButtonCallToActionInt {
 }
 
 const ButtonCallToAction = ({ text, url }: ButtonCallToActionInt) => {
+  const linkRef = useRef<HTMLAnchorElement>(null);
+
+  const handleClick = () => {
+    if (linkRef.current) {
+      linkRef.current.click();
+    }
+  };
   return (
-    <button className='button'>
-      <Link to={url} className='button-link' target={"_blank"}>
+    <button className='button' onClick={handleClick}>
+      <Link ref={linkRef} to={url} className='button-link' target={"_blank"}>
         {text}
       </Link>
     </button>
