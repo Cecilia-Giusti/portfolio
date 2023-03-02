@@ -85,7 +85,7 @@
     position: relative;
 
     @media screen and (max-width: 500px) {
-        min-height: 120vh;
+        min-height: 1150px;
     }
 
     &-content {
@@ -191,6 +191,9 @@
     padding-bottom: 100px;
     gap: 50px;
     min-height: 100vh;
+    @media screen and (max-width: 500px) {
+        min-height: 120vh;
+   }
 
     &-content {
         @include flex;
