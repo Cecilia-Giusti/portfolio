@@ -14,12 +14,14 @@ const SocialNetwork = ({ url, logo, name }: socialNetworkInt) => {
     buttonLinkedin.addEventListener("touchstart", (event) => {
       event.preventDefault();
       buttonLinkedin.click();
+      event.stopImmediatePropagation();
     });
   }
   if (buttonGitHub) {
     buttonGitHub.addEventListener("touchstart", (event) => {
       event.preventDefault();
       buttonGitHub.click();
+      event.stopImmediatePropagation();
     });
   }
 
