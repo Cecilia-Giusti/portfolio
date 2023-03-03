@@ -34,3 +34,4 @@ Cécilia Giusti
 # History
 
 V1 : Lunch project
+V1.2 : improve mobile experience
