@@ -51,11 +51,13 @@ const Header = ({ skillsDom, realisationsDom }: headerInt) => {
     setNavOpen(false);
     event.preventDefault();
     if (skillsDom) {
-      const offset = -50;
+      const offset = -250;
       window.scrollTo({
         top: skillsDom.offsetTop + offset,
         behavior: "smooth",
       });
+
+      setNavOpen(false);
     }
   };
 
@@ -67,6 +69,8 @@ const Header = ({ skillsDom, realisationsDom }: headerInt) => {
         top: realisationsDom.offsetTop,
         behavior: "smooth",
       });
+
+      setNavOpen(false);
     }
   };
 
@@ -148,7 +152,7 @@ const Header = ({ skillsDom, realisationsDom }: headerInt) => {
                 href='#realisations'
                 onClick={scrollToRealisations}
                 className='header-list-link'>
-                Réalisation
+                Réalisations
               </a>
             </li>
           </ul>
