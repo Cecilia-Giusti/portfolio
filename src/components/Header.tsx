@@ -50,11 +50,13 @@ const Header = ({ skillsDom, realisationsDom }: headerInt) => {
   const scrollToSkills = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
     if (skillsDom) {
-      const offset = -50;
+      const offset = -250;
       window.scrollTo({
         top: skillsDom.offsetTop + offset,
         behavior: "smooth",
       });
+
+      setNavOpen(false);
     }
   };
 
@@ -65,6 +67,8 @@ const Header = ({ skillsDom, realisationsDom }: headerInt) => {
         top: realisationsDom.offsetTop,
         behavior: "smooth",
       });
+
+      setNavOpen(false);
     }
   };
 
