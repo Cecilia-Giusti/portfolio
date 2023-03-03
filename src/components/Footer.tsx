@@ -3,6 +3,16 @@ import SocialNetwork from "./SocialNetwork";
 import ButtonContact from "./ButtonContact";
 
 const Footer = () => {
+  const buttonUp = document.querySelector("#up");
+  const buttonNetwork = document.querySelectorAll(".button-socialNetwork");
+
+  if (buttonUp) {
+    buttonUp.addEventListener("touchstart", function (event) {
+      event.preventDefault();
+      scrollToTop();
+    });
+  }
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -39,9 +49,10 @@ const Footer = () => {
         </p>
       </div>
       <button
+        id='up'
         className='footer-button-top'
         aria-label='to up'
-        onClick={scrollToTop}>
+        onClick={() => scrollToTop()}>
         <i className='fa-solid fa-chevron-up'></i>
       </button>
     </footer>

@@ -7,14 +7,34 @@ interface socialNetworkInt {
 }
 
 const SocialNetwork = ({ url, logo, name }: socialNetworkInt) => {
+  const buttonLinkedin = document.getElementById("Linkedin-button");
+  const buttonGitHub = document.getElementById("GitHub-button");
+
+  if (buttonLinkedin) {
+    buttonLinkedin.addEventListener("touchstart", (event) => {
+      event.preventDefault();
+      buttonLinkedin.click();
+    });
+  }
+  if (buttonGitHub) {
+    buttonGitHub.addEventListener("touchstart", (event) => {
+      event.preventDefault();
+      buttonGitHub.click();
+    });
+  }
+
   return (
     <Link
       to={url}
       className='footer-item-link'
+      id={`${name}-link`}
       target={"_blank"}
       aria-label={`See more about me on ${name}`}>
-      <button className='footer-item-button' aria-label={`${name}`}>
-        <i className={logo}></i>
+      <button
+        id={`${name}-button`}
+        className='footer-item-button button-socialNetwork'
+        aria-label={`${name}`}>
+        <i className={logo} id={`${name}-icon`}></i>
       </button>
     </Link>
   );

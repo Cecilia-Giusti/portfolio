@@ -30,7 +30,6 @@ const Realisations = forwardRef<HTMLDivElement, realisationsInt>(
     ) => {
       event.preventDefault();
       props.setLastVisitedSection(window.pageYOffset);
-      console.log(window.pageYOffset);
       navigate(`/mes-projets/${id}`);
       window.scrollTo(0, 0);
     };
