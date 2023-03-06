@@ -41,7 +41,7 @@ const Realisations = forwardRef<HTMLDivElement, realisationsInt>(
 
     return (
       <section className='section-realisations' id='realisations'>
-        <Title text='RÉALISATIONS' numberTitle={2} />
+        <Title text='QUELQUES RÉALISATIONS' numberTitle={2} />
         <div className='section-realisations-content'>
           {projects.projects.map((project: Project, id) => {
             return (
