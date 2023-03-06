@@ -4,10 +4,9 @@ import ButtonContact from "./ButtonContact";
 
 const Footer = () => {
   const buttonUp = document.querySelector("#up");
-  const buttonNetwork = document.querySelectorAll(".button-socialNetwork");
 
   if (buttonUp) {
-    buttonUp.addEventListener("touchstart", function (event) {
+    buttonUp.addEventListener("touchstart", (event) => {
       event.preventDefault();
       scrollToTop();
     });
@@ -21,7 +20,7 @@ const Footer = () => {
   };
   return (
     <footer className='footer'>
-      <p className='footer-text'>À bientôt ! </p>
+      <p className='footer-text'>À bientôt !</p>
       <div className='footer-callToAction'>
         <ul className='footer-list'>
           {socialIcons.socialNetwork.map((item, id) => {

@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 
 const Project = () => {
   const navigate = useNavigate();
-
   const realisations = projects.projects;
   const idProject = Number(useParams().id);
   const realisation = realisations.find((project) => project.id === idProject);
