@@ -24,7 +24,7 @@ const AboutMe = forwardRef<HTMLDivElement, aboutmeInt>((props, ref) => {
           <p className='section-aboutMe-paragraph'>
             En tant que manager pendant des années, j'ai appris à être
             méthodique, travailler en équipe et à être polyvalente. J'ai décidé
-            de faire passer ma passion en premier en devenant Développeur
+            de faire passer ma passion en premier en devenant Développeuse
             Front-End. Après avoir suivi une formation diplômante, j'ai pu
             mettre mes compétences en pratique à travers divers projets. Je suis
             maintenant motivée à utiliser mes connaissances dans une nouvelle
