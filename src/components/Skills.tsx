@@ -1,8 +1,6 @@
 import SkillItem from "./SkillItem";
 import Title from "./Title";
 import skills from "../data/database.json";
-import ButtonDownload from "./ButtonDownload";
-
 import { forwardRef } from "react";
 
 interface skillsInt {
@@ -43,11 +41,6 @@ const Skills = forwardRef<HTMLDivElement, skillsInt>((props, ref) => {
             </ul>
           </div>
         </article>
-        <ButtonDownload
-          text='Télécharger mon CV'
-          url='./assets/files/CV_Giusti_Cecilia.pdf'
-          file='CV_Giusti_Cecilia.pdf'
-        />
       </div>
     </section>
   );
