@@ -43,35 +43,37 @@ const Realisations = forwardRef<HTMLDivElement, realisationsInt>(
       <section className='section-realisations' id='realisations'>
         <Title text='QUELQUES RÉALISATIONS' numberTitle={2} />
         <div className='section-realisations-content'>
-          {projects.projects.map((project: Project, id) => {
-            return (
-              <div
-                className={`projet-container ${project.name
-                  .split(" ")[0]
-                  .toLowerCase()}`}
-                key={id}>
-                <Link
-                  to={`/mes-projets/${project.id}`}
-                  onClick={(event) => handleLinkClick(event, project.id)}
-                  className='section-realisations-link'>
-                  <ProjectCard
-                    name={
-                      screenWidth < 400
-                        ? project.name.split(" ")[0]
-                        : project.name
-                    }
-                    img={project.img}
-                    description={
-                      screenWidth < 400
-                        ? truncateString(project.description, 400)
-                        : project.description
-                    }
-                    stack={project.stack}
-                  />
-                </Link>
-              </div>
-            );
-          })}
+          {projects.projects
+            .sort((a, b) => b.id - a.id)
+            .map((project: Project, id) => {
+              return (
+                <div
+                  className={`projet-container ${project.name
+                    .split(" ")[0]
+                    .toLowerCase()}`}
+                  key={id}>
+                  <Link
+                    to={`/mes-projets/${project.id}`}
+                    onClick={(event) => handleLinkClick(event, project.id)}
+                    className='section-realisations-link'>
+                    <ProjectCard
+                      name={
+                        screenWidth < 400
+                          ? project.name.split(" ")[0]
+                          : project.name
+                      }
+                      img={project.img}
+                      description={
+                        screenWidth < 400
+                          ? truncateString(project.description, 400)
+                          : project.description
+                      }
+                      stack={project.stack}
+                    />
+                  </Link>
+                </div>
+              );
+            })}
         </div>
       </section>
     );
